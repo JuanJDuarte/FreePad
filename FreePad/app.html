@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
 </head>
-<body>
+<body onclick="deleteNote()">
 	<header>
 		<div class="logo-wrapper">
 			<div class="burger-menu">
@@ -58,7 +58,7 @@
 				<div class="stickNote">
 					<div class="stick-head">
 						<h4 class="stick-title">Title</h4>
-						<div class="stick-check" onmousedown="newNote(notesCol)">
+						<div id="svg1" class="stick-check" onmousedown="newNote(notesCol)">
 							<svg id = "checker" fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
     					<path d="M0 0h24v24H0z" fill="none"/>
    						 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
@@ -70,12 +70,8 @@
 				<div class="stickNote-saved">
 					<div class="stick-head">
 						<h4 class="stick-title">Title</h4>
-						<div class="stick-delete">
-							<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-    						<path d="M0 0h24v24H0V0z" fill="none"/>
-   							 <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"/>
-   							 <path d="M0 0h24v24H0z" fill="none"/>
-							</svg>
+						<div class="stick-delete" onclick="">
+							<img class="stick-delete" src="icons\ic_delete_forever_black_24px.svg" alt="delete">
 						</div>
 					</div>
 					<div class="img-container">
@@ -107,6 +103,18 @@
 				</svg>
 			</div>
 			<div class="contentBlock" id="image-col">
+				<div class="stickNote-image">
+					<div class="stick-head-image">
+						<h4 class="stick-title">Title</h4>
+						<div id="svg1" class="stick-check" onmousedown="newNote(imgCol)">
+							<svg id = "checker" fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    					<path d="M0 0h24v24H0z" fill="none"/>
+   						 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+						</svg>
+						</div>
+					</div>
+					<textarea id="cont-ent-img" placeholder="Put your link here" class="stick-content"></textarea>
+				</div>
 				<div class="stickNote-image">
 					<div class="stick-head-image">
 						<h4 class="stick-title">Title</h4>
